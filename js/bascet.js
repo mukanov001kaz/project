@@ -11,7 +11,7 @@ const bascet = function () {
     product.addEventListener("click", (e) => {
         if (e.target.classList.contains("product__add-basket")) {
             if (!user) {
-                alertText("Для добавления товара в корзину войдите или зарегистрируйте акаунт", "./html/signup.html");
+                alertText("Для добавления товара в корзину войдите или зарегистрируйте акаунт", "../html/signup.html");
             }
 
             if (user) {
@@ -80,7 +80,7 @@ const bascet = function () {
 
                 localStorage.setItem("user", JSON.stringify(goOutArray));
             });
-            alertText("Вы вышли с аккаунта", "../index.html");
+            alertText("Вы вышли с аккаунта", "./index.html");
         }
     });
 };
