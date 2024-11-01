@@ -1,0 +1,40 @@
+.search {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    &__input-block {
+        label {
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+
+    &__input {
+        width: 350px;
+        box-shadow: 0 5px 10px #e5e4e2, -5px -10px 20px #e5e4e2;
+    }
+
+    &__flex {
+        display: flex;
+    }
+
+    &__none {
+        display: none;
+    }
+}
+
+.sort {
+    box-shadow: 0 5px 10px #e5e4e2, -5px -10px 20px #e5e4e2;
+    &__block {
+        label {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: end;
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+}

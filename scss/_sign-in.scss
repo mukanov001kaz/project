@@ -1,0 +1,13 @@
+.signin {
+    width: 400px;
+    margin: 50px auto 0 auto;
+}
+.signin__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+.signin__title {
+    text-align: center;
+    margin-bottom: 30px;
+}
