@@ -9,13 +9,13 @@ let sigUpArray = [];
 
 function signUpInfo() {
     if (name.value === "" || email.value === "" || password.value === "") {
-        alertText("Введите коректные данные", "html/signup.html");
+        alertText("Введите коректные данные", "./html/signup.html");
         return;
     } else if (!email.value.includes("@") || !email.value.includes(".")) {
-        alertText("email должен содержать знак @ и .", "html/signup.html");
+        alertText("email должен содержать знак @ и .", "./html/signup.html");
         return;
     } else if (password.value.length < 8) {
-        alertText("Пароль должен быть от 8 символов и выше", "html/signup.html");
+        alertText("Пароль должен быть от 8 символов и выше", "./html/signup.html");
         return;
     } else {
         const signUpObj = {
@@ -34,7 +34,7 @@ function signUpInfo() {
         email.value = "";
         password.value = "";
 
-        window.location.href = "html/signin.html";
+        window.location.href = "./html/signin.html";
     }
 }
 
