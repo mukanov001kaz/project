@@ -11,7 +11,7 @@ const bascet = function () {
     product.addEventListener("click", (e) => {
         if (e.target.classList.contains("product__add-basket")) {
             if (!user) {
-                alertText("Для добавления товара в корзину войдите или зарегистрируйте акаунт", "../html/signup.html");
+                alertText("Для добавления товара в корзину войдите или зарегистрируйте акаунт", "html/signup.html");
             }
 
             if (user) {
@@ -19,7 +19,7 @@ const bascet = function () {
 
                 user.forEach((item) => {
                     if (!item.login) {
-                        alertText("Войдите в свой акаунт", "../html/signin.html");
+                        alertText("Войдите в свой акаунт", "html/signin.html");
                     } else {
                         const productItem = e.target.closest(".product__item");
 
@@ -41,7 +41,7 @@ const bascet = function () {
                         if (!some) {
                             item.array.push(bascetObj);
                         } else {
-                            alertText("Такой товар есть в корзине", "../index.html");
+                            alertText("Такой товар есть в корзине", "./index.html");
                         }
 
                         userBascetArray.push(item);
