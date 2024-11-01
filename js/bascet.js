@@ -19,7 +19,7 @@ const bascet = function () {
 
                 user.forEach((item) => {
                     if (!item.login) {
-                        alertText("Войдите в свой акаунт", "./html/signin.html");
+                        alertText("Войдите в свой акаунт", "../html/signin.html");
                     } else {
                         const productItem = e.target.closest(".product__item");
 
@@ -41,7 +41,7 @@ const bascet = function () {
                         if (!some) {
                             item.array.push(bascetObj);
                         } else {
-                            alertText("Такой товар есть в корзине", "./index.html");
+                            alertText("Такой товар есть в корзине", "../index.html");
                         }
 
                         userBascetArray.push(item);
@@ -64,7 +64,7 @@ const bascet = function () {
     bascetCountShow();
 
     bascetBtn.addEventListener("click", () => {
-        window.location.href = "./html/bascet.html";
+        window.location.href = "../html/bascet.html";
     });
 
     goOut.addEventListener("click", () => {
@@ -80,7 +80,7 @@ const bascet = function () {
 
                 localStorage.setItem("user", JSON.stringify(goOutArray));
             });
-            alertText("Вы вышли с аккаунта", "./index.html");
+            alertText("Вы вышли с аккаунта", "../index.html");
         }
     });
 };
