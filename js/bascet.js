@@ -64,7 +64,7 @@ const bascet = function () {
     bascetCountShow();
 
     bascetBtn.addEventListener("click", () => {
-        window.location.href = "./html/bascet.html";
+        window.location.href = "html/bascet.html";
     });
 
     goOut.addEventListener("click", () => {
