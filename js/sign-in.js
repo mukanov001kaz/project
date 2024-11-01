@@ -18,9 +18,9 @@ function signInInfo() {
 
                 localStorage.setItem("user", JSON.stringify(signInArray));
 
-                window.location.href = "./index.html";
+                window.location.href = "../index.html";
             } else {
-                alertText("Введите коректные данные", "html/signin.html");
+                alertText("Введите коректные данные", "../html/signin.html");
             }
         });
     }
