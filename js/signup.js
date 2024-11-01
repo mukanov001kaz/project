@@ -34,7 +34,7 @@ function signUpInfo() {
         email.value = "";
         password.value = "";
 
-        window.location.href = "html/signin.html";
+        window.location.href = "./html/signin.html";
     }
 }
 
