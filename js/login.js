@@ -3,6 +3,6 @@ export const login = function () {
 
     login.addEventListener("click", () => {
         // window.location.href = "../../html/signIn/signin.html";
-        window.location.href = "../html/signup.html";
+        window.location.href = "./html/signup.html";
     });
 };

@@ -184,5 +184,5 @@ function saveProductsMinus(id) {
 }
 
 buyBtn.addEventListener("click", () => {
-    alertText("Спасибо за покупку", "../index.html");
+    alertText("Спасибо за покупку", "./index.html");
 });
