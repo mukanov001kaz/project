@@ -4,6 +4,7 @@ const bascetBlock = document.querySelector(".bascet-block");
 const bascetPage = document.querySelector(".bascet__content-block");
 const formater = new Intl.NumberFormat("ru");
 const buyBtn = document.querySelector(".buy__button");
+const backButton = document.querySelector(".buy__button-back");
 
 let bascet;
 
@@ -47,13 +48,16 @@ const renderBasket = function (bascet) {
 };
 
 function localProduct() {
+    backButton.style.display = "none";
+
     if (localStorage.getItem("user")) {
         const userLocal = JSON.parse(localStorage.getItem("user"));
 
         userLocal.forEach((item) => {
             if (item.array.length === 0) {
-                bascetPage.textContent = "Корзина пуста ";
+                bascetPage.textContent = "Корзина пуста";
                 buyBtn.style.display = "none";
+                backButton.style.display = "block";
             }
         });
     }
@@ -156,7 +160,6 @@ function saveProductsPlus(id) {
     const userSaveCount = JSON.parse(localStorage.getItem("user"));
 
     userSaveCount.forEach((item) => {
-        console.log(item);
         item.array.forEach((count) => {
             if (id == count.id) {
                 count.quantity++;
@@ -185,4 +188,8 @@ function saveProductsMinus(id) {
 
 buyBtn.addEventListener("click", () => {
     alertText("Спасибо за покупку", "./index.html");
+});
+
+backButton.addEventListener("click", () => {
+    window.location.href = "./index.html";
 });
